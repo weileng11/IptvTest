@@ -80,6 +80,9 @@ public class MainActivity extends FragmentActivity {
         setVPFouceChanged();
     }
 
+    /**
+     * 初始化viewpager
+     */
     private void initAllViewPager() {
         fragments = new ArrayList<>();
         Bundle args = new Bundle();
