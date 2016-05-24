@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.iptv.test.MainActivity"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    >
+    <com.iptv.tvwidget.view.SmoothHorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <com.iptv.tvwidget.view.LinearMainLayout
+            android:id="@+id/main_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/title_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <com.iptv.tvwidget.view.RadioButtonView
+                        android:id="@+id/rb_lx_music"
+                        style="@style/TitleButton"
+                        android:drawableLeft="@mipmap/sub1_icon"
+                        android:nextFocusDown="@+id/iv_re_0"
+                        android:text="行程"
+                        android:textColor="@color/red"
+                        />
+
+                    <com.iptv.tvwidget.view.RadioButtonView
+                        android:id="@+id/rb_xh"
+                        style="@style/TitleButton"
+                        android:drawableLeft="@mipmap/sub2_icon"
+                        android:text="路况"
+                        android:checked="false"
+                        android:textColor="@color/red"
+                        />
+
+                    <com.iptv.tvwidget.view.RadioButtonView
+                        android:id="@+id/rb_gs"
+                        style="@style/TitleButton"
+                        android:drawableLeft="@mipmap/sub3_icon"
+                        android:text="距离"
+                        android:textColor="@color/red"
+                        />
+
+                    <com.iptv.tvwidget.view.RadioButtonView
+                        android:id="@+id/rb_mf"
+                        style="@style/TitleButton"
+                        android:drawableLeft="@mipmap/sub4_icon"
+                        android:text="冒险"
+                        android:textColor="@color/red"
+                        />
+                </RadioGroup>
+
+                <!--<include layout="@layout/layout_recommend" />-->
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </com.iptv.tvwidget.view.LinearMainLayout>
+    </com.iptv.tvwidget.view.SmoothHorizontalScrollView>
+
+    <!-- 最顶层边框 -->
+
+    <com.iptv.tvwidget.view.MainUpView
+        android:id="@+id/mainUpView_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:upImageRes="@drawable/test_rectangle"
+        />
+    
+
+</RelativeLayout>
