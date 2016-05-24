@@ -58,7 +58,14 @@ public class MainActivity extends FragmentActivity {
     private FragmentManager manager;
     private FragmentTransaction transaction;
     private float scale;
-    private ArrayList<View> listView;
+//    private ArrayList<View> listView;
+
+    private final String TAG = "MainActivity";
+    private boolean isRunning = true;
+    private FragAdapter adapter;
+    private List<BaseFragment> fragments;
+
+    public static String homeParams;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -313,13 +320,5 @@ public class MainActivity extends FragmentActivity {
         }
 
     }
-
-
-    private final String TAG = "HomeActivity";
-    private boolean isRunning = true;
-    private FragAdapter adapter;
-    private List<BaseFragment> fragments;
-
-    public static String homeParams;
     
 }
