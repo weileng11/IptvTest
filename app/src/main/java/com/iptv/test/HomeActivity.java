@@ -16,6 +16,8 @@ import android.widget.RadioGroup;
 import com.iptv.test.adapter.FragAdapter;
 import com.iptv.test.fragment.BaseFragment;
 import com.iptv.test.fragment.ConditionFragment;
+import com.iptv.test.fragment.ConditionFragment1;
+import com.iptv.test.fragment.ConditionFragment2;
 import com.iptv.test.fragment.DistanceFragment;
 import com.iptv.test.fragment.TestFragment;
 import com.iptv.test.fragment.WeilengFragment;
@@ -31,29 +33,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * classes:com.iptv.test.MainActivity
+ * classes:com.iptv.test.HomeActivity
  *
  * @author lt
- * @date 2016/5/23
- * @time 15:19
+ * @date 2016/6/8
+ * @time 14:26
  * @description
  */
-public class MainActivity extends FragmentActivity {
-
+public class HomeActivity extends FragmentActivity {
     private ConditionFragment mConditionFragment;
     private OpenEffectBridge mOpenEffectBridge;
     private ViewPager viewpager;
     private RadioGroup title_group;
     private RadioButton rb_xh;
     private RadioButton rb_gs;
+    private RadioButton rb_science;
+    private RadioButton rb_ap;
     private RadioButton rb_mf;
     private RadioButton lx_music;
     private View mOldFocus;
     private DistanceFragment mDistanceFragment;
+    private ConditionFragment1 mConditionFragment1;
+    private ConditionFragment2 mConditionFragment2;
     private TestFragment mTestFragment;
     private WeilengFragment mWeilengFragment;
     private MainUpView mainUpViewViewpager;
-//    private ShowPopupWindow showPopupWindow;
+    //    private ShowPopupWindow showPopupWindow;
     private LinearMainLayout main_lay11;
     private FragmentManager manager;
     private FragmentTransaction transaction;
@@ -65,11 +70,10 @@ public class MainActivity extends FragmentActivity {
     private FragAdapter adapter;
     private List<BaseFragment> fragments;
     public static String homeParams;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         initApp();
     }
@@ -94,9 +98,11 @@ public class MainActivity extends FragmentActivity {
         Bundle args = new Bundle();
 
         mConditionFragment = new ConditionFragment();
-//        args.putInt("num", 1);
-//        lx_fm.setArguments(args);
         fragments.add(mConditionFragment);
+        mConditionFragment1 = new ConditionFragment1();
+        fragments.add(mConditionFragment1);
+        mConditionFragment2 = new ConditionFragment2();
+        fragments.add(mConditionFragment2);
 
         mDistanceFragment = new DistanceFragment();
         fragments.add(mDistanceFragment);
@@ -125,10 +131,12 @@ public class MainActivity extends FragmentActivity {
 
     protected void findViewById() {
         title_group = (RadioGroup) findViewById(R.id.title_group);
-        lx_music = (RadioButton) findViewById(R.id.rb_lx_music);
-        rb_xh = (RadioButton) findViewById(R.id.rb_xh);
-        rb_gs = (RadioButton) findViewById(R.id.rb_gs);
-        rb_mf = (RadioButton) findViewById(R.id.rb_mf);
+        lx_music = (RadioButton) findViewById(R.id.rb_song);
+        rb_xh = (RadioButton) findViewById(R.id.rb_story);
+        rb_gs = (RadioButton) findViewById(R.id.rb_english);
+        rb_mf = (RadioButton) findViewById(R.id.rb_guoxue);
+        rb_science = (RadioButton) findViewById(R.id.rb_science);
+        rb_ap = (RadioButton) findViewById(R.id.rb_ap);
 
         viewpager = (ViewPager) findViewById(R.id.viewpager);
         main_lay11 = (LinearMainLayout) findViewById(R.id.main_lay);
@@ -221,6 +229,12 @@ public class MainActivity extends FragmentActivity {
                 case 3:
                     viewpager.setCurrentItem(position);
                     break;
+                case 4:
+                    viewpager.setCurrentItem(position);
+                    break;
+                case 5:
+                    viewpager.setCurrentItem(position);
+                    break;
             }
 
         }
@@ -250,6 +264,12 @@ public class MainActivity extends FragmentActivity {
                     case R.id.rb_mf:
                         i = 3;
                         break;
+                    case R.id.rb_science:
+                        i = 4;
+                        break;
+                    case R.id.rb_ap:
+                        i = 5;
+                        break;
                     default:
                         break;
                 }
@@ -278,6 +298,13 @@ public class MainActivity extends FragmentActivity {
                     case R.id.rb_mf:
                         rb_mf.setChecked(true);
                         i = 3;
+                    case R.id.rb_science:
+                        rb_science.setChecked(true);
+                        i = 4;
+                        break;
+                    case R.id.rb_ap:
+                        rb_ap.setChecked(true);
+                        i = 5;
                         break;
                     default:
                         break;
@@ -305,5 +332,4 @@ public class MainActivity extends FragmentActivity {
         }
 
     }
-    
 }
