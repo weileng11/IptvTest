@@ -24,7 +24,7 @@ public class WeilengFragment  extends BaseFragment {
             return null;
         }
         if (null == view) {
-            view = inflater.inflate(R.layout.fragment_weileng, container, false);
+            view = inflater.inflate(R.layout.fragment_csong, container, false);
         }
         return view;
     }

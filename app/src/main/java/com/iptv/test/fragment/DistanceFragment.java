@@ -25,7 +25,7 @@ public class DistanceFragment  extends BaseFragment {
             return null;
         }
         if (null == view) {
-            view = inflater.inflate(R.layout.fragment_distance, container, false);
+            view = inflater.inflate(R.layout.fragment_csong, container, false);
         }
         return view;
     }

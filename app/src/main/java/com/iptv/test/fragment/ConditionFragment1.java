@@ -1,5 +1,6 @@
 package com.iptv.test.fragment;
 
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,14 +9,14 @@ import android.view.ViewGroup;
 import com.iptv.test.R;
 
 /**
- * classes:com.iptv.test.fragment.TestFragment
+ * classes:com.iptv.test.fragment.ConditionFragment
  *
  * @author lt
  * @date 2016/5/23
- * @time 15:33
+ * @time 15:34
  * @description
  */
-public class TestFragment  extends BaseFragment{
+public class ConditionFragment1 extends BaseFragment{
 
     private View view;
     @Override
