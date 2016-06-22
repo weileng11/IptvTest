@@ -1,1 +1,1 @@
-include ':app', ':ANDROID_IPTV_ANIMATION_WIDGET'
+include ':app', ':ANDROID_IPTV_ANIMATION_WIDGET','TvSDK_Lib_project'
