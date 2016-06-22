@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content11"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_txb_home"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+
+    <com.iptv.tvwidget.view.SmoothHorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <com.iptv.tvwidget.view.LinearMainLayout
+            android:id="@+id/main_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
+
+                    <RadioGroup
+                        android:id="@+id/title_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px120"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/px60"
+                        android:layout_marginRight="@dimen/px86"
+                        android:layout_marginTop="@dimen/px17"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal">
+
+                        <com.iptv.tvwidget.view.RadioButtonView
+                            android:id="@+id/rb_song"
+                            style="@style/TitleButton"
+                            android:background="@mipmap/bg_children_song"
+                            android:checked="false"
+                            android:nextFocusLeft="@+id/rb_mf" />
+
+                        <com.iptv.tvwidget.view.RadioButtonView
+                            android:id="@+id/rb_story"
+                            style="@style/TitleButton"
+                            android:background="@mipmap/bg_story" />
+
+                        <com.iptv.tvwidget.view.RadioButtonView
+                            android:id="@+id/rb_english"
+                            style="@style/TitleButton"
+                            android:background="@mipmap/bg_english" />
+
+
+                        <com.iptv.tvwidget.view.RadioButtonView
+                            android:id="@+id/rb_guoxue"
+                            style="@style/TitleButton"
+                            android:background="@mipmap/bg_guoxue"
+                            android:nextFocusRight="@+id/rb_lx_music" />
+
+                        <com.iptv.tvwidget.view.RadioButtonView
+                            android:id="@+id/rb_science"
+                            style="@style/TitleButton"
+                            android:background="@mipmap/bg_science"
+                            android:nextFocusRight="@+id/rb_lx_music" />
+
+                        <com.iptv.tvwidget.view.RadioButtonView
+                            android:id="@+id/rb_ap"
+                            style="@style/TitleButton"
+                            android:background="@mipmap/bg_ancient_poetry"
+                            android:nextFocusRight="@+id/rb_lx_music" />
+                    </RadioGroup>
+
+                    <!--<include layout="@layout/layout_recommend" />-->
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/title_group"
+                        android:layout_gravity="center"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:focusable="false"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </com.iptv.tvwidget.view.LinearMainLayout>
+    </com.iptv.tvwidget.view.SmoothHorizontalScrollView>
+
+    <!-- 最顶层边框 -->
+
+    <com.iptv.tvwidget.view.MainUpView
+        android:id="@+id/mainUpView_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:upImageRes="@drawable/test_rectangle"
+        />
+
+</RelativeLayout>

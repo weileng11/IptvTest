@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".activity.MainActivity">
+
+
+    <com.iptv.tvwidget.view.SmoothHorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <com.iptv.tvwidget.view.LinearMainLayout
+                android:id="@+id/main_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+
+                <com.iptv.tvwidget.view.MainLayout
+                    android:id="@+id/mainLayout_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingLeft="@dimen/px86"
+                    android:paddingRight="@dimen/px86">
+
+                    <ImageView
+                        android:layout_width="@dimen/px120"
+                        android:layout_height="@dimen/px100"
+                        android:background="@mipmap/logo" />
+
+                    <com.iptv.tvwidget.view.ReflectItemView
+                        android:id="@+id/iv_2"
+                        android:layout_width="@dimen/px145"
+                        android:layout_height="@dimen/px144"
+                        android:layout_marginTop="@dimen/px114"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:isReflect="false"
+                        app:isShape="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/bg_change_become" />
+
+                    </com.iptv.tvwidget.view.ReflectItemView>
+
+                    <com.iptv.tvwidget.view.ReflectItemView
+                        android:id="@+id/iv_3"
+                        android:layout_width="@dimen/px145"
+                        android:layout_height="@dimen/px144"
+                        android:layout_marginTop="@dimen/px272"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:isReflect="false"
+                        app:isShape="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/bg_play_history" />
+
+                    </com.iptv.tvwidget.view.ReflectItemView>
+
+                    <com.iptv.tvwidget.view.ReflectItemView
+                        android:id="@+id/iv_4"
+                        android:layout_width="@dimen/px145"
+                        android:layout_height="@dimen/px144"
+                        android:layout_marginTop="@dimen/px430"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:isReflect="false"
+                        app:isShape="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/bg_my_collect" />
+
+                    </com.iptv.tvwidget.view.ReflectItemView>
+
+                    <com.iptv.tvwidget.view.ReflectItemView
+                        android:id="@+id/iv_5"
+                        android:layout_width="@dimen/px547"
+                        android:layout_height="@dimen/px325"
+                        android:layout_marginLeft="@dimen/px165"
+                        android:layout_marginTop="@dimen/px114"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:isReflect="false"
+                        app:isShape="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/bg_lefe_advertisement" />
+
+                    </com.iptv.tvwidget.view.ReflectItemView>
+
+                    <com.iptv.tvwidget.view.ReflectItemView
+                        android:id="@+id/iv_6"
+                        android:layout_width="@dimen/px176"
+                        android:layout_height="@dimen/px120"
+                        android:layout_marginLeft="@dimen/px165"
+                        android:layout_marginTop="@dimen/px450"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:isReflect="false"
+                        app:isShape="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/bg_lefe_one" />
+
+                    </com.iptv.tvwidget.view.ReflectItemView>
+
+                    <com.iptv.tvwidget.view.ReflectItemView
+                        android:id="@+id/iv_7"
+                        android:layout_width="@dimen/px176"
+                        android:layout_height="@dimen/px120"
+                        android:layout_marginLeft="@dimen/px350"
+                        android:layout_marginTop="@dimen/px450"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:isReflect="false"
+                        app:isShape="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/bg_lefe_two" />
+
+                    </com.iptv.tvwidget.view.ReflectItemView>
+
+                    <com.iptv.tvwidget.view.ReflectItemView
+                        android:id="@+id/iv_8"
+                        android:layout_width="@dimen/px176"
+                        android:layout_height="@dimen/px120"
+                        android:layout_marginLeft="@dimen/px535"
+                        android:layout_marginTop="@dimen/px450"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:isReflect="false"
+                        app:isShape="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/bg_lefe_three" />
+
+                    </com.iptv.tvwidget.view.ReflectItemView>
+
+
+                    <com.iptv.tvwidget.view.ReflectItemView
+                        android:id="@+id/iv_9"
+                        android:layout_width="@dimen/px388"
+                        android:layout_height="@dimen/px223"
+                        android:layout_marginLeft="@dimen/px730"
+                        android:layout_marginTop="@dimen/px114"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:isReflect="false"
+                        app:isShape="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/bg_rgiht_one" />
+
+                    </com.iptv.tvwidget.view.ReflectItemView>
+
+
+                    <com.iptv.tvwidget.view.ReflectItemView
+                        android:id="@+id/iv_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px223"
+                        android:layout_marginLeft="@dimen/px730"
+                        android:layout_marginTop="@dimen/px348"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        app:isReflect="false"
+                        app:isShape="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/bg_right_two" />
+
+                    </com.iptv.tvwidget.view.ReflectItemView>
+
+                </com.iptv.tvwidget.view.MainLayout>
+            </com.iptv.tvwidget.view.LinearMainLayout>
+        </LinearLayout>
+
+
+    </com.iptv.tvwidget.view.SmoothHorizontalScrollView>
+
+    <!-- 最顶层边框 -->
+
+    <com.iptv.tvwidget.view.MainUpView
+        android:id="@+id/mainUpView_viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:upImageRes="@drawable/bg_fauce" />
+
+</RelativeLayout>

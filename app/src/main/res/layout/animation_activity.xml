@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/btn_down_toup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="位移动画从下到上"
+        />
+
+    <Button
+        android:id="@+id/btn_lefe_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="位移动画从左到右"
+        />
+
+    <Button
+        android:id="@+id/btn_alph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="动画透明度"
+        />
+
+    <Button
+        android:id="@+id/btn_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="动画旋转"
+        />
+
+    <Button
+        android:id="@+id/btn_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="动画缩放"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/fl_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        
+     <ImageView
+         android:id="@+id/img_bg"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="45dp"
+        android:background="@mipmap/bg_txb_home"
+        />
+        
+        <ImageView
+            android:id="@+id/img_v1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="50dp"
+            android:background="@mipmap/bg_lefe_two"
+            />
+
+        <ImageView
+            android:id="@+id/img_v2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="200dp"
+            android:background="@mipmap/bg_lefe_two"
+            />
+    </FrameLayout>
+    
+    
+    
+
+</LinearLayout>
