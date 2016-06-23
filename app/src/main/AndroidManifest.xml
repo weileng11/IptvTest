@@ -32,13 +32,14 @@
         </activity>
 
         <activity android:name=".activity.AnimationActivity">
+        </activity>
+
+        <activity android:name=".activity.PropertyAnimationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name="com.sdk.commplatform.ProxyActivity"
             android:configChanges="orientation|navigation|screenSize|keyboardHidden|keyboard"
